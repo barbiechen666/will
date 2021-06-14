@@ -7,6 +7,7 @@ contract Bank{
     mapping(address => bool) isOwner;
     mapping(address => uint) balances;
     bool activated;
+    mapping(address=>uint) balances;
 
     modifier checkSameOwner (address addr){
         require(mainowner == addr, "not contract owner");
@@ -24,29 +25,6 @@ contract Bank{
         isOwner[msg.sender] = true;
         activated = false;
     }
-    
-    //領錢出來
-    function withdraw(uint amount) public payable checkSameOwner(msg.sender){
-        require((amount*1000000000000000000) <= address(this).balance, "not enough funds");
-        (bool sent, ) = msg.sender.call.value(amount*1000000000000000000)("");
-        require(sent, "Failed to send Ether");
-    }
-
-    mapping(address=>uint) balances;
-    //address owner;
-    //string owneremail; 
-    /*struct Owner{
-        address addr;
-        string owneremail;
-        mapping(address=>mapping(uint=>Beneficiary)) beneficiarylist;
-    }*/
-    /*struct Beneficiary{
-        string beneficiaryemail;
-        uint portion;
-        bool execute;
-    }*/
-    //mapping(uint=>Beneficiary) beneficiaryinfo;
-    //uint[] public beneficiaryids;
  
     /*constructor() public{
         owner=msg.sender;
@@ -66,6 +44,11 @@ contract Bank{
     }*/
     function deposit() public payable{
         emit Deposit(msg.sender,msg.value);
+    }
+     function withdraw(uint amount) public payable checkSameOwner(msg.sender){
+        require((amount*1000000000000000000) <= address(this).balance, "not enough funds");
+        (bool sent, ) = msg.sender.call.value(amount*1000000000000000000)("");
+        require(sent, "Failed to send Ether");
     }
     //領錢出來
     /*function withdraw(uint amount) payable public{
