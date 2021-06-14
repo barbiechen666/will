@@ -1,42 +1,67 @@
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity ^0.4.2;
 
 contract Bank{
-    address[] owners;
-    address mainowner;
-    mapping(address => bool) isOwner;
-    mapping(address => uint) balances;
-    bool activated;
-    mapping(address=>uint) balances
-
-    modifier checkSameOwner (address addr){
-        require(mainowner == addr, "not contract owner");
-        _; //執行
+    mapping(address=>uint) balances;
+    address owner;
+    //string owneremail; 
+    /*struct Owner{
+        address addr;
+        string owneremail;
+        mapping(address=>mapping(uint=>Beneficiary)) beneficiarylist;
+    }*/
+    /*struct Beneficiary{
+        string beneficiaryemail;
+        uint portion;
+        bool execute;
+    }*/
+    //mapping(uint=>Beneficiary) beneficiaryinfo;
+    //uint[] public beneficiaryids;
+ 
+    constructor() public{
+        owner=msg.sender;
     }
-
-    //存錢進合約
-    function deposit() public payable{
-        balances[msg.sender]+=msg.value;
-    }
-
-    constructor () public{
-        owners = [msg.sender];
-        mainowner = msg.sender;
-        isOwner[msg.sender] = true;
-        activated = false;
+    modifier checksameowner(address addr){
+        require(owner==addr,"not owner");
+        _;
     }
     
-    //領錢出來
-    function withdraw(uint amount) public payable checkSameOwner(msg.sender){
-        require((amount*1000000000000000000) <= address(this).balance, "not enough funds");
-        (bool sent, ) = msg.sender.call.value(amount*1000000000000000000)("");
-        require(sent, "Failed to send Ether");
+    event Deposit(address user,uint deamount);
+    event Withdraw(address user,uint wiamount);
+    
+    //存錢進合約
+    /*function deposit() public payable{
+        balances[msg.sender]+=msg.value;
+        emit Deposit(msg.sender,msg.value);
+    }*/
+    function deposit() public payable{
+        emit Deposit(msg.sender,msg.value);
     }
-
+    //領錢出來
+    /*function withdraw(uint amount) payable public{
+        if(balances[msg.sender]>=amount){
+            balances[msg.sender]-=amount;
+            msg.sender.transfer(amount);
+            emit Withdraw(msg.sender,amount);
+        }
+    }*/
+    function withdraw(uint amount) payable public checksameowner(msg.sender){
+      require(amount*10*18<=address(this).balance,"exceed!");
+      (bool sent, )=msg.sender.call.value(amount*10**18)("");
+      require(sent, "Falied to send Ether");
+      emit Withdraw(msg.sender,amount*10**18);
+        }
+    
+    
     //查看合約的錢
     function getBankBalance() public view returns(uint){
-        return address(this).balance;
+        return this.balance;
     }
+//}
+//contract testamentaryset{
+
+//}
+//contract settestamentary{
+    //mapping(address=>uint) balances;
     string owneremail; 
     uint id;
     address _to;
@@ -117,7 +142,9 @@ contract Bank{
            for(uint i=0;i<toadds.length;i++){
              toadds[i].transfer(transferamount[toadds[i]]);  
            }
-        }}   
+        }
+        //_to.transfer(address(this).balance/100*_portion);}
+    }
 }
 
 contract setpassword{
@@ -169,5 +196,6 @@ contract setpassword{
          bank.submitTransaction(msg.sender,portion);
          //msg.sender.transfer(bank.getBankBalance()/100*beneficiaryportion[uint(keccak256(_password))]);
      }
+
+
 }
-   
