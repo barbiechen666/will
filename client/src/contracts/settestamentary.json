@@ -1,0 +1,2628 @@
+{
+  "contractName": "settestamentary",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "beneficiaryids",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
+        }
+      ],
+      "name": "submitEmail",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getEmail",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_benemail",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_distriburate",
+          "type": "uint256"
+        }
+      ],
+      "name": "addbene",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getBeneficiary",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_benemail\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_distriburate\",\"type\":\"uint256\"}],\"name\":\"addbene\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"beneficiaryids\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getBeneficiary\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getEmail\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_email\",\"type\":\"string\"}],\"name\":\"submitEmail\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/chanchu-ting/will/contracts/settestamentary.sol\":\"settestamentary\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/chanchu-ting/will/contracts/settestamentary.sol\":{\"keccak256\":\"0x20241015145d4ddd464869b00d4f3554b709f08c4b093468cfe4dbb979c5cd31\",\"urls\":[\"bzz-raw://aacab9c3f0d79f28faf230ec34469cf8f86157de1c21df56a2169770de2119d8\",\"dweb:/ipfs/QmWJb5vgPQeNfbSCBLzbjV3HWBfDFJyQ5DyfS8qPf6RThe\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610684806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063302df0831461005c5780633b30476d146101155780634cd31704146101575780637e79e8ba14610226578063dbfc560a146102a9575b600080fd5b6100886004803603602081101561007257600080fd5b8101908080359060200190929190505050610364565b604051808060200184815260200183151515158152602001828103825285818151815260200191508051906020019080838360005b838110156100d85780820151818401526020810190506100bd565b50505050905090810190601f1680156101055780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101416004803603602081101561012b57600080fd5b8101908080359060200190929190505050610445565b6040518082815260200191505060405180910390f35b6102246004803603606081101561016d57600080fd5b81019080803590602001909291908035906020019064010000000081111561019457600080fd5b8201836020820111156101a657600080fd5b803590602001918460018302840111640100000000831117156101c857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610466565b005b61022e6104ee565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561026e578082015181840152602081019050610253565b50505050905090810190601f16801561029b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610362600480360360208110156102bf57600080fd5b81019080803590602001906401000000008111156102dc57600080fd5b8201836020820111156102ee57600080fd5b8035906020019184600183028401116401000000008311171561031057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610590565b005b606060008060006001600086815260200190815260200160002090508060000181600101548260020160009054906101000a900460ff16828054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104305780601f1061040557610100808354040283529160200191610430565b820191906000526020600020905b81548152906001019060200180831161041357829003601f168201915b50505050509250935093509350509193909250565b6002818154811061045257fe5b906000526020600020016000915090505481565b6000600160008581526020019081526020016000209050828160000190805190602001906104959291906105aa565b5081816001018190555060008160020160006101000a81548160ff021916908315150217905550600284908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b606060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105865780601f1061055b57610100808354040283529160200191610586565b820191906000526020600020905b81548152906001019060200180831161056957829003601f168201915b5050505050905090565b80600090805190602001906105a69291906105aa565b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105eb57805160ff1916838001178555610619565b82800160010185558215610619579182015b828111156106185782518255916020019190600101906105fd565b5b509050610626919061062a565b5090565b61064c91905b80821115610648576000816000905550600101610630565b5090565b9056fea265627a7a72315820bf61a6060f9096e02ac26299587b9e794dd43ba669d301fa7aaa3c541e2b007f64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063302df0831461005c5780633b30476d146101155780634cd31704146101575780637e79e8ba14610226578063dbfc560a146102a9575b600080fd5b6100886004803603602081101561007257600080fd5b8101908080359060200190929190505050610364565b604051808060200184815260200183151515158152602001828103825285818151815260200191508051906020019080838360005b838110156100d85780820151818401526020810190506100bd565b50505050905090810190601f1680156101055780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b6101416004803603602081101561012b57600080fd5b8101908080359060200190929190505050610445565b6040518082815260200191505060405180910390f35b6102246004803603606081101561016d57600080fd5b81019080803590602001909291908035906020019064010000000081111561019457600080fd5b8201836020820111156101a657600080fd5b803590602001918460018302840111640100000000831117156101c857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190505050610466565b005b61022e6104ee565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561026e578082015181840152602081019050610253565b50505050905090810190601f16801561029b5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610362600480360360208110156102bf57600080fd5b81019080803590602001906401000000008111156102dc57600080fd5b8201836020820111156102ee57600080fd5b8035906020019184600183028401116401000000008311171561031057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610590565b005b606060008060006001600086815260200190815260200160002090508060000181600101548260020160009054906101000a900460ff16828054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104305780601f1061040557610100808354040283529160200191610430565b820191906000526020600020905b81548152906001019060200180831161041357829003601f168201915b50505050509250935093509350509193909250565b6002818154811061045257fe5b906000526020600020016000915090505481565b6000600160008581526020019081526020016000209050828160000190805190602001906104959291906105aa565b5081816001018190555060008160020160006101000a81548160ff021916908315150217905550600284908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b606060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105865780601f1061055b57610100808354040283529160200191610586565b820191906000526020600020905b81548152906001019060200180831161056957829003601f168201915b5050505050905090565b80600090805190602001906105a69291906105aa565b5050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106105eb57805160ff1916838001178555610619565b82800160010185558215610619579182015b828111156106185782518255916020019190600101906105fd565b5b509050610626919061062a565b5090565b61064c91905b80821115610648576000816000905550600101610630565b5090565b9056fea265627a7a72315820bf61a6060f9096e02ac26299587b9e794dd43ba669d301fa7aaa3c541e2b007f64736f6c63430005100032",
+  "sourceMap": "0:1049:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:1049:4;;;;;;;",
+  "deployedSourceMap": "0:1049:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:1049:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;847:195;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;847:195:4;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;847:195:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;253:28;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;253:28:4;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;530:284;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;530:284:4;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;530:284:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;530:284:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;530:284:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;530:284:4;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;410:90;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;410:90:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;320:85;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;320:85:4;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;320:85:4;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;320:85:4;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;320:85:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;320:85:4;;;;;;;;;;;;;;;:::i;:::-;;847:195;901:13;915:4;920;935:21;959:15;:19;975:2;959:19;;;;;;;;;;;935:43;;996:1;:18;;1015:1;:9;;;1025:1;:9;;;;;;;;;;;;988:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;847:195;;;;;:::o;253:28::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;530:284::-;614:27;643:15;:19;659:2;643:19;;;;;;;;;;;614:48;;698:9;671:7;:24;;:36;;;;;;;;;;;;:::i;:::-;;732:13;716:7;:15;;:29;;;;770:5;754:7;:15;;;:21;;;;;;;;;;;;;;;;;;784:14;804:2;784:23;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;784:23:4;;;;;;;;;;;;;;;;;;;;;;530:284;;;;:::o;410:90::-;451:13;483:10;476:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;410:90;:::o;320:85::-;392:6;379:10;:19;;;;;;;;;;;;:::i;:::-;;320:85;:::o;0:1049::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "contract settestamentary{\n    //mapping(address=>uint) balances;\n    string owneremail; \n    \n    struct Beneficiary{\n        string beneficiaryemail;\n        uint portion;\n        bool execute;\n    }\n    mapping(uint=>Beneficiary) beneficiaryinfo;\n    uint[] public beneficiaryids;\n    \n    //簽立遺囑人信箱\n    function submitEmail(string memory _email) public {\n       owneremail = _email;\n    }\n    function getEmail() public view returns (string memory) {\n        return owneremail;\n    }\n    //添加入受益人\n    function addbene(uint id,string memory _benemail,uint _distriburate) public{\n       Beneficiary storage newbene= beneficiaryinfo[id];\n       newbene.beneficiaryemail = _benemail;\n       newbene.portion=_distriburate;\n       newbene.execute=false;\n       beneficiaryids.push(id);\n    }\n    //查看受益人資訊\n    function getBeneficiary(uint id) public view returns (string memory,uint,bool){\n        Beneficiary storage s = beneficiaryinfo[id];\n        return (s.beneficiaryemail,s.portion,s.execute);\n    }\n    \n}",
+  "sourcePath": "/Users/chanchu-ting/will/contracts/settestamentary.sol",
+  "ast": {
+    "absolutePath": "/Users/chanchu-ting/will/contracts/settestamentary.sol",
+    "exportedSymbols": {
+      "settestamentary": [
+        276
+      ]
+    },
+    "id": 277,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 276,
+        "linearizedBaseContracts": [
+          276
+        ],
+        "name": "settestamentary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 177,
+            "name": "owneremail",
+            "nodeType": "VariableDeclaration",
+            "scope": 276,
+            "src": "69:17:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 176,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "69:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "settestamentary.Beneficiary",
+            "id": 184,
+            "members": [
+              {
+                "constant": false,
+                "id": 179,
+                "name": "beneficiaryemail",
+                "nodeType": "VariableDeclaration",
+                "scope": 184,
+                "src": "126:23:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 178,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "126:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 181,
+                "name": "portion",
+                "nodeType": "VariableDeclaration",
+                "scope": 184,
+                "src": "159:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 180,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "159:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 183,
+                "name": "execute",
+                "nodeType": "VariableDeclaration",
+                "scope": 184,
+                "src": "181:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 182,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "181:4:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Beneficiary",
+            "nodeType": "StructDefinition",
+            "scope": 276,
+            "src": "98:102:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 188,
+            "name": "beneficiaryinfo",
+            "nodeType": "VariableDeclaration",
+            "scope": 276,
+            "src": "205:42:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Beneficiary_$184_storage_$",
+              "typeString": "mapping(uint256 => struct settestamentary.Beneficiary)"
+            },
+            "typeName": {
+              "id": 187,
+              "keyType": {
+                "id": 185,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "213:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "205:26:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Beneficiary_$184_storage_$",
+                "typeString": "mapping(uint256 => struct settestamentary.Beneficiary)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 186,
+                "name": "Beneficiary",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 184,
+                "src": "219:11:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                  "typeString": "struct settestamentary.Beneficiary"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 191,
+            "name": "beneficiaryids",
+            "nodeType": "VariableDeclaration",
+            "scope": 276,
+            "src": "253:28:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 189,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "253:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 190,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "253:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 200,
+              "nodeType": "Block",
+              "src": "370:35:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 198,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 196,
+                      "name": "owneremail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 177,
+                      "src": "379:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 197,
+                      "name": "_email",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 193,
+                      "src": "392:6:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "379:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 199,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:19:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 201,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitEmail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 194,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 193,
+                  "name": "_email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 201,
+                  "src": "341:20:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 192,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "341:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:22:4"
+            },
+            "returnParameters": {
+              "id": 195,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "370:0:4"
+            },
+            "scope": 276,
+            "src": "320:85:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 208,
+              "nodeType": "Block",
+              "src": "466:34:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 206,
+                    "name": "owneremail",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 177,
+                    "src": "483:10:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 205,
+                  "id": 207,
+                  "nodeType": "Return",
+                  "src": "476:17:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 209,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEmail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 202,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "427:2:4"
+            },
+            "returnParameters": {
+              "id": 205,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 204,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 209,
+                  "src": "451:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 203,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "450:15:4"
+            },
+            "scope": 276,
+            "src": "410:90:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 248,
+              "nodeType": "Block",
+              "src": "605:209:4",
+              "statements": [
+                {
+                  "assignments": [
+                    219
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 219,
+                      "name": "newbene",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 248,
+                      "src": "614:27:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                        "typeString": "struct settestamentary.Beneficiary"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 218,
+                        "name": "Beneficiary",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 184,
+                        "src": "614:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                          "typeString": "struct settestamentary.Beneficiary"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 223,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 220,
+                      "name": "beneficiaryinfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 188,
+                      "src": "643:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Beneficiary_$184_storage_$",
+                        "typeString": "mapping(uint256 => struct settestamentary.Beneficiary storage ref)"
+                      }
+                    },
+                    "id": 222,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 221,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 211,
+                      "src": "659:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "643:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Beneficiary_$184_storage",
+                      "typeString": "struct settestamentary.Beneficiary storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "614:48:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 228,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 224,
+                        "name": "newbene",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "671:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                          "typeString": "struct settestamentary.Beneficiary storage pointer"
+                        }
+                      },
+                      "id": 226,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "beneficiaryemail",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 179,
+                      "src": "671:24:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 227,
+                      "name": "_benemail",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 213,
+                      "src": "698:9:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "671:36:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 229,
+                  "nodeType": "ExpressionStatement",
+                  "src": "671:36:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 234,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 230,
+                        "name": "newbene",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "716:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                          "typeString": "struct settestamentary.Beneficiary storage pointer"
+                        }
+                      },
+                      "id": 232,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "portion",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 181,
+                      "src": "716:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 233,
+                      "name": "_distriburate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 215,
+                      "src": "732:13:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "716:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 235,
+                  "nodeType": "ExpressionStatement",
+                  "src": "716:29:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 240,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 236,
+                        "name": "newbene",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "754:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                          "typeString": "struct settestamentary.Beneficiary storage pointer"
+                        }
+                      },
+                      "id": 238,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "execute",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 183,
+                      "src": "754:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 239,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "770:5:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "754:21:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 241,
+                  "nodeType": "ExpressionStatement",
+                  "src": "754:21:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 245,
+                        "name": "id",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 211,
+                        "src": "804:2:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 242,
+                        "name": "beneficiaryids",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 191,
+                        "src": "784:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                          "typeString": "uint256[] storage ref"
+                        }
+                      },
+                      "id": 244,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "784:19:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) returns (uint256)"
+                      }
+                    },
+                    "id": 246,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "784:23:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 247,
+                  "nodeType": "ExpressionStatement",
+                  "src": "784:23:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 249,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addbene",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 216,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 211,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 249,
+                  "src": "547:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 210,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 213,
+                  "name": "_benemail",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 249,
+                  "src": "555:23:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 212,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "555:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 215,
+                  "name": "_distriburate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 249,
+                  "src": "579:18:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 214,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "579:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:52:4"
+            },
+            "returnParameters": {
+              "id": 217,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "605:0:4"
+            },
+            "scope": 276,
+            "src": "530:284:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 274,
+              "nodeType": "Block",
+              "src": "925:117:4",
+              "statements": [
+                {
+                  "assignments": [
+                    261
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 261,
+                      "name": "s",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 274,
+                      "src": "935:21:4",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                        "typeString": "struct settestamentary.Beneficiary"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 260,
+                        "name": "Beneficiary",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 184,
+                        "src": "935:11:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                          "typeString": "struct settestamentary.Beneficiary"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 265,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 262,
+                      "name": "beneficiaryinfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 188,
+                      "src": "959:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Beneficiary_$184_storage_$",
+                        "typeString": "mapping(uint256 => struct settestamentary.Beneficiary storage ref)"
+                      }
+                    },
+                    "id": 264,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 263,
+                      "name": "id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 251,
+                      "src": "975:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "959:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Beneficiary_$184_storage",
+                      "typeString": "struct settestamentary.Beneficiary storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "935:43:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 266,
+                          "name": "s",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 261,
+                          "src": "996:1:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                            "typeString": "struct settestamentary.Beneficiary storage pointer"
+                          }
+                        },
+                        "id": 267,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "beneficiaryemail",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 179,
+                        "src": "996:18:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 268,
+                          "name": "s",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 261,
+                          "src": "1015:1:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                            "typeString": "struct settestamentary.Beneficiary storage pointer"
+                          }
+                        },
+                        "id": 269,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "portion",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 181,
+                        "src": "1015:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 270,
+                          "name": "s",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 261,
+                          "src": "1025:1:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Beneficiary_$184_storage_ptr",
+                            "typeString": "struct settestamentary.Beneficiary storage pointer"
+                          }
+                        },
+                        "id": 271,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "execute",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 183,
+                        "src": "1025:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "id": 272,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "995:40:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_uint256_$_t_bool_$",
+                      "typeString": "tuple(string storage ref,uint256,bool)"
+                    }
+                  },
+                  "functionReturnParameters": 259,
+                  "id": 273,
+                  "nodeType": "Return",
+                  "src": "988:47:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 275,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBeneficiary",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 252,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 251,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "871:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 250,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "871:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "870:9:4"
+            },
+            "returnParameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 254,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "901:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 253,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "901:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 256,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "915:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "915:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 258,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 275,
+                  "src": "920:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 257,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "920:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "900:25:4"
+            },
+            "scope": 276,
+            "src": "847:195:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 277,
+        "src": "0:1049:4"
+      }
+    ],
+    "src": "0:1049:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/chanchu-ting/will/contracts/settestamentary.sol",
+      "exportedSymbols": {
+        "settestamentary": [
+          276
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            276
+          ],
+          "name": "settestamentary",
+          "scope": 277
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owneremail",
+              "scope": 276,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 176,
+                "name": "ElementaryTypeName",
+                "src": "69:6:4"
+              }
+            ],
+            "id": 177,
+            "name": "VariableDeclaration",
+            "src": "69:17:4"
+          },
+          {
+            "attributes": {
+              "canonicalName": "settestamentary.Beneficiary",
+              "name": "Beneficiary",
+              "scope": 276,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "beneficiaryemail",
+                  "scope": 184,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 178,
+                    "name": "ElementaryTypeName",
+                    "src": "126:6:4"
+                  }
+                ],
+                "id": 179,
+                "name": "VariableDeclaration",
+                "src": "126:23:4"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "portion",
+                  "scope": 184,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 180,
+                    "name": "ElementaryTypeName",
+                    "src": "159:4:4"
+                  }
+                ],
+                "id": 181,
+                "name": "VariableDeclaration",
+                "src": "159:12:4"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "execute",
+                  "scope": 184,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 182,
+                    "name": "ElementaryTypeName",
+                    "src": "181:4:4"
+                  }
+                ],
+                "id": 183,
+                "name": "VariableDeclaration",
+                "src": "181:12:4"
+              }
+            ],
+            "id": 184,
+            "name": "StructDefinition",
+            "src": "98:102:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "beneficiaryinfo",
+              "scope": 276,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct settestamentary.Beneficiary)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct settestamentary.Beneficiary)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 185,
+                    "name": "ElementaryTypeName",
+                    "src": "213:4:4"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Beneficiary",
+                      "referencedDeclaration": 184,
+                      "type": "struct settestamentary.Beneficiary"
+                    },
+                    "id": 186,
+                    "name": "UserDefinedTypeName",
+                    "src": "219:11:4"
+                  }
+                ],
+                "id": 187,
+                "name": "Mapping",
+                "src": "205:26:4"
+              }
+            ],
+            "id": 188,
+            "name": "VariableDeclaration",
+            "src": "205:42:4"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "beneficiaryids",
+              "scope": 276,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "uint256[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 189,
+                    "name": "ElementaryTypeName",
+                    "src": "253:4:4"
+                  }
+                ],
+                "id": 190,
+                "name": "ArrayTypeName",
+                "src": "253:6:4"
+              }
+            ],
+            "id": 191,
+            "name": "VariableDeclaration",
+            "src": "253:28:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "submitEmail",
+              "scope": 276,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_email",
+                      "scope": 201,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 192,
+                        "name": "ElementaryTypeName",
+                        "src": "341:6:4"
+                      }
+                    ],
+                    "id": 193,
+                    "name": "VariableDeclaration",
+                    "src": "341:20:4"
+                  }
+                ],
+                "id": 194,
+                "name": "ParameterList",
+                "src": "340:22:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 195,
+                "name": "ParameterList",
+                "src": "370:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 177,
+                              "type": "string storage ref",
+                              "value": "owneremail"
+                            },
+                            "id": 196,
+                            "name": "Identifier",
+                            "src": "379:10:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 193,
+                              "type": "string memory",
+                              "value": "_email"
+                            },
+                            "id": 197,
+                            "name": "Identifier",
+                            "src": "392:6:4"
+                          }
+                        ],
+                        "id": 198,
+                        "name": "Assignment",
+                        "src": "379:19:4"
+                      }
+                    ],
+                    "id": 199,
+                    "name": "ExpressionStatement",
+                    "src": "379:19:4"
+                  }
+                ],
+                "id": 200,
+                "name": "Block",
+                "src": "370:35:4"
+              }
+            ],
+            "id": 201,
+            "name": "FunctionDefinition",
+            "src": "320:85:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getEmail",
+              "scope": 276,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 202,
+                "name": "ParameterList",
+                "src": "427:2:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 209,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 203,
+                        "name": "ElementaryTypeName",
+                        "src": "451:6:4"
+                      }
+                    ],
+                    "id": 204,
+                    "name": "VariableDeclaration",
+                    "src": "451:13:4"
+                  }
+                ],
+                "id": 205,
+                "name": "ParameterList",
+                "src": "450:15:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 205
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 177,
+                          "type": "string storage ref",
+                          "value": "owneremail"
+                        },
+                        "id": 206,
+                        "name": "Identifier",
+                        "src": "483:10:4"
+                      }
+                    ],
+                    "id": 207,
+                    "name": "Return",
+                    "src": "476:17:4"
+                  }
+                ],
+                "id": 208,
+                "name": "Block",
+                "src": "466:34:4"
+              }
+            ],
+            "id": 209,
+            "name": "FunctionDefinition",
+            "src": "410:90:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addbene",
+              "scope": 276,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 249,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 210,
+                        "name": "ElementaryTypeName",
+                        "src": "547:4:4"
+                      }
+                    ],
+                    "id": 211,
+                    "name": "VariableDeclaration",
+                    "src": "547:7:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_benemail",
+                      "scope": 249,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 212,
+                        "name": "ElementaryTypeName",
+                        "src": "555:6:4"
+                      }
+                    ],
+                    "id": 213,
+                    "name": "VariableDeclaration",
+                    "src": "555:23:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_distriburate",
+                      "scope": 249,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 214,
+                        "name": "ElementaryTypeName",
+                        "src": "579:4:4"
+                      }
+                    ],
+                    "id": 215,
+                    "name": "VariableDeclaration",
+                    "src": "579:18:4"
+                  }
+                ],
+                "id": 216,
+                "name": "ParameterList",
+                "src": "546:52:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 217,
+                "name": "ParameterList",
+                "src": "605:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        219
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newbene",
+                          "scope": 248,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct settestamentary.Beneficiary",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Beneficiary",
+                              "referencedDeclaration": 184,
+                              "type": "struct settestamentary.Beneficiary"
+                            },
+                            "id": 218,
+                            "name": "UserDefinedTypeName",
+                            "src": "614:11:4"
+                          }
+                        ],
+                        "id": 219,
+                        "name": "VariableDeclaration",
+                        "src": "614:27:4"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct settestamentary.Beneficiary storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 188,
+                              "type": "mapping(uint256 => struct settestamentary.Beneficiary storage ref)",
+                              "value": "beneficiaryinfo"
+                            },
+                            "id": 220,
+                            "name": "Identifier",
+                            "src": "643:15:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 211,
+                              "type": "uint256",
+                              "value": "id"
+                            },
+                            "id": 221,
+                            "name": "Identifier",
+                            "src": "659:2:4"
+                          }
+                        ],
+                        "id": 222,
+                        "name": "IndexAccess",
+                        "src": "643:19:4"
+                      }
+                    ],
+                    "id": 223,
+                    "name": "VariableDeclarationStatement",
+                    "src": "614:48:4"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "beneficiaryemail",
+                              "referencedDeclaration": 179,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 219,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "newbene"
+                                },
+                                "id": 224,
+                                "name": "Identifier",
+                                "src": "671:7:4"
+                              }
+                            ],
+                            "id": 226,
+                            "name": "MemberAccess",
+                            "src": "671:24:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 213,
+                              "type": "string memory",
+                              "value": "_benemail"
+                            },
+                            "id": 227,
+                            "name": "Identifier",
+                            "src": "698:9:4"
+                          }
+                        ],
+                        "id": 228,
+                        "name": "Assignment",
+                        "src": "671:36:4"
+                      }
+                    ],
+                    "id": 229,
+                    "name": "ExpressionStatement",
+                    "src": "671:36:4"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "portion",
+                              "referencedDeclaration": 181,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 219,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "newbene"
+                                },
+                                "id": 230,
+                                "name": "Identifier",
+                                "src": "716:7:4"
+                              }
+                            ],
+                            "id": 232,
+                            "name": "MemberAccess",
+                            "src": "716:15:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 215,
+                              "type": "uint256",
+                              "value": "_distriburate"
+                            },
+                            "id": 233,
+                            "name": "Identifier",
+                            "src": "732:13:4"
+                          }
+                        ],
+                        "id": 234,
+                        "name": "Assignment",
+                        "src": "716:29:4"
+                      }
+                    ],
+                    "id": 235,
+                    "name": "ExpressionStatement",
+                    "src": "716:29:4"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "execute",
+                              "referencedDeclaration": 183,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 219,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "newbene"
+                                },
+                                "id": 236,
+                                "name": "Identifier",
+                                "src": "754:7:4"
+                              }
+                            ],
+                            "id": 238,
+                            "name": "MemberAccess",
+                            "src": "754:15:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 239,
+                            "name": "Literal",
+                            "src": "770:5:4"
+                          }
+                        ],
+                        "id": 240,
+                        "name": "Assignment",
+                        "src": "754:21:4"
+                      }
+                    ],
+                    "id": 241,
+                    "name": "ExpressionStatement",
+                    "src": "754:21:4"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 191,
+                                  "type": "uint256[] storage ref",
+                                  "value": "beneficiaryids"
+                                },
+                                "id": 242,
+                                "name": "Identifier",
+                                "src": "784:14:4"
+                              }
+                            ],
+                            "id": 244,
+                            "name": "MemberAccess",
+                            "src": "784:19:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 211,
+                              "type": "uint256",
+                              "value": "id"
+                            },
+                            "id": 245,
+                            "name": "Identifier",
+                            "src": "804:2:4"
+                          }
+                        ],
+                        "id": 246,
+                        "name": "FunctionCall",
+                        "src": "784:23:4"
+                      }
+                    ],
+                    "id": 247,
+                    "name": "ExpressionStatement",
+                    "src": "784:23:4"
+                  }
+                ],
+                "id": 248,
+                "name": "Block",
+                "src": "605:209:4"
+              }
+            ],
+            "id": 249,
+            "name": "FunctionDefinition",
+            "src": "530:284:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getBeneficiary",
+              "scope": 276,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "scope": 275,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 250,
+                        "name": "ElementaryTypeName",
+                        "src": "871:4:4"
+                      }
+                    ],
+                    "id": 251,
+                    "name": "VariableDeclaration",
+                    "src": "871:7:4"
+                  }
+                ],
+                "id": 252,
+                "name": "ParameterList",
+                "src": "870:9:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 275,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 253,
+                        "name": "ElementaryTypeName",
+                        "src": "901:6:4"
+                      }
+                    ],
+                    "id": 254,
+                    "name": "VariableDeclaration",
+                    "src": "901:13:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 275,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 255,
+                        "name": "ElementaryTypeName",
+                        "src": "915:4:4"
+                      }
+                    ],
+                    "id": 256,
+                    "name": "VariableDeclaration",
+                    "src": "915:4:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 275,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 257,
+                        "name": "ElementaryTypeName",
+                        "src": "920:4:4"
+                      }
+                    ],
+                    "id": 258,
+                    "name": "VariableDeclaration",
+                    "src": "920:4:4"
+                  }
+                ],
+                "id": 259,
+                "name": "ParameterList",
+                "src": "900:25:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        261
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "s",
+                          "scope": 274,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct settestamentary.Beneficiary",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Beneficiary",
+                              "referencedDeclaration": 184,
+                              "type": "struct settestamentary.Beneficiary"
+                            },
+                            "id": 260,
+                            "name": "UserDefinedTypeName",
+                            "src": "935:11:4"
+                          }
+                        ],
+                        "id": 261,
+                        "name": "VariableDeclaration",
+                        "src": "935:21:4"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct settestamentary.Beneficiary storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 188,
+                              "type": "mapping(uint256 => struct settestamentary.Beneficiary storage ref)",
+                              "value": "beneficiaryinfo"
+                            },
+                            "id": 262,
+                            "name": "Identifier",
+                            "src": "959:15:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 251,
+                              "type": "uint256",
+                              "value": "id"
+                            },
+                            "id": 263,
+                            "name": "Identifier",
+                            "src": "975:2:4"
+                          }
+                        ],
+                        "id": 264,
+                        "name": "IndexAccess",
+                        "src": "959:19:4"
+                      }
+                    ],
+                    "id": 265,
+                    "name": "VariableDeclarationStatement",
+                    "src": "935:43:4"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 259
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string storage ref,uint256,bool)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "beneficiaryemail",
+                              "referencedDeclaration": 179,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 261,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "s"
+                                },
+                                "id": 266,
+                                "name": "Identifier",
+                                "src": "996:1:4"
+                              }
+                            ],
+                            "id": 267,
+                            "name": "MemberAccess",
+                            "src": "996:18:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "portion",
+                              "referencedDeclaration": 181,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 261,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "s"
+                                },
+                                "id": 268,
+                                "name": "Identifier",
+                                "src": "1015:1:4"
+                              }
+                            ],
+                            "id": 269,
+                            "name": "MemberAccess",
+                            "src": "1015:9:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "execute",
+                              "referencedDeclaration": 183,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 261,
+                                  "type": "struct settestamentary.Beneficiary storage pointer",
+                                  "value": "s"
+                                },
+                                "id": 270,
+                                "name": "Identifier",
+                                "src": "1025:1:4"
+                              }
+                            ],
+                            "id": 271,
+                            "name": "MemberAccess",
+                            "src": "1025:9:4"
+                          }
+                        ],
+                        "id": 272,
+                        "name": "TupleExpression",
+                        "src": "995:40:4"
+                      }
+                    ],
+                    "id": 273,
+                    "name": "Return",
+                    "src": "988:47:4"
+                  }
+                ],
+                "id": 274,
+                "name": "Block",
+                "src": "925:117:4"
+              }
+            ],
+            "id": 275,
+            "name": "FunctionDefinition",
+            "src": "847:195:4"
+          }
+        ],
+        "id": 276,
+        "name": "ContractDefinition",
+        "src": "0:1049:4"
+      }
+    ],
+    "id": 277,
+    "name": "SourceUnit",
+    "src": "0:1049:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x4Daf4D379CB5D14200Cc6AaD9A61f7617b92f319",
+      "transactionHash": "0x6668807818be6c9a297b98dee8f9f2d977e31133b9ffc8a7a6d5a6ac01804bf1"
+    }
+  },
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-06-06T09:41:51.299Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
